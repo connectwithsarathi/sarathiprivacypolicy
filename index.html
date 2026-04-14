@@ -3,218 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Sarathi</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Privacy Policy - Sarathi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-page: #F8F9FB;
-            --bg-card: #FFFFFF;
-            --text-main: #1E2329;
-            --text-muted: #707A8A;
-            --accent-gold: #FCD535;
-            --accent-green: #0ECB81;
-            --border-color: #EAECEF;
-            --shadow: 0 4px 24px rgba(0,0,0,0.06);
+            --clr-background: #FFFFFF;
+            --clr-primary-text: #1E2329;
+            --clr-secondary-text: #707A8A;
+            --clr-border: #EAECEF;
+            --clr-accent: #0ECB81;
+            --clr-callout-bg: #F5F5F5;
+            --clr-body-text: #474D57;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--clr-background);
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-page);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding-bottom: 60px;
+            color: var(--clr-primary-text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER */
-        header {
-            background: white;
-            padding: 60px 24px;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 40px;
-        }
-        .logo-area { font-size: 32px; font-weight: 800; color: var(--text-main); margin-bottom: 12px; }
-        .logo-area span { color: var(--accent-gold); }
-        .doc-title { font-size: 18px; font-weight: 600; color: var(--text-main); margin-bottom: 4px; }
-        .update-date { font-size: 13px; color: var(--text-muted); font-weight: 500; }
-
-        /* SINGLE PAGE WRAPPER */
-        .wrapper {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* CARDS */
-        section {
-            background: var(--bg-card);
-            padding: 40px;
-            border-radius: 16px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 30px;
-            box-shadow: var(--shadow);
-        }
-        .section-tag {
-            display: inline-block;
-            padding: 4px 14px;
-            background: #F0F2F5;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 800;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            letter-spacing: 0.5px;
-        }
-        h2 { font-size: 22px; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
-        h2 i { color: var(--accent-gold); font-size: 20px; }
-        p { font-size: 15px; color: #474D57; margin-bottom: 16px; }
-
-        /* LISTS & BADGES */
-        ul { list-style: none; }
-        .data-item {
+        .navbar {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--clr-border);
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: center;
-            padding: 16px 0;
-            border-bottom: 1px solid #F5F5F5;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 10;
         }
-        .data-item:last-child { border-bottom: none; }
-        .data-label { font-weight: 600; font-size: 15px; color: var(--text-main); }
-        .data-desc { font-size: 13px; color: var(--text-muted); display: block; margin-top: 2px; }
 
-        .badge {
-            padding: 6px 12px;
-            border-radius: 6px;
+        .nav-title h1 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-title p {
+            margin: 0;
             font-size: 11px;
-            font-weight: 800;
-            text-transform: uppercase;
-            white-space: nowrap;
+            color: var(--clr-secondary-text);
+            font-weight: 500;
         }
-        .badge-offline { background: #E8F9F3; color: var(--accent-green); }
-        .badge-shared { background: #FFF9E6; color: #D99000; }
-        .badge-system { background: #F0F2F5; color: var(--text-muted); }
 
-        /* CALLOUT BOX */
-        .callout {
-            background: #1E2329;
-            color: white;
-            padding: 30px;
-            border-radius: 12px;
-            margin-top: 10px;
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 24px 24px 80px 24px;
+        }
+
+        .timestamp {
+            color: var(--clr-secondary-text);
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .section-header {
             display: flex;
-            gap: 20px;
             align-items: center;
+            margin-top: 32px;
+            margin-bottom: 8px;
+            color: var(--clr-secondary-text);
         }
-        .callout-icon { font-size: 32px; color: var(--accent-gold); }
-        .callout-content h4 { color: var(--accent-gold); margin-bottom: 6px; font-size: 16px; }
-        .callout-content p { color: #AEB4BC; font-size: 14px; margin-bottom: 0; line-height: 1.5; }
 
-        footer { 
-            text-align: center; 
-            padding: 60px 0; 
-            color: var(--text-muted); 
-            font-size: 11px; 
-            font-weight: 900; 
+        .section-header span {
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .section-header svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+        }
+
+        h2 {
+            font-size: 15px;
+            font-weight: 900;
+            margin: 0 0 12px 0;
+        }
+
+        .content {
+            font-size: 13px;
+            color: var(--clr-body-text);
+            font-weight: 400;
+            white-space: pre-line;
+        }
+
+        .callout-box {
+            background-color: var(--clr-callout-bg);
+            border: 1px solid var(--clr-border);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 32px 0;
+        }
+
+        .callout-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: var(--clr-primary-text);
+            font-size: 14px;
+            font-weight: 900;
+        }
+
+        .callout-header svg {
+            margin-right: 8px;
+            color: var(--clr-accent);
+        }
+
+        .callout-text {
+            font-size: 12.5px;
+            color: rgba(30, 35, 41, 0.7);
+            font-weight: 500;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #D1D5DB;
+            font-size: 10px;
+            font-weight: 900;
             letter-spacing: 3px;
             text-transform: uppercase;
         }
 
-        @media (max-width: 600px) {
-            header { padding: 40px 20px; }
-            section { padding: 24px; }
-            .data-item { flex-direction: column; align-items: flex-start; gap: 10px; }
-            .callout { flex-direction: column; text-align: center; }
+        ul {
+            padding-left: 0;
+            list-style: none;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--clr-accent);
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: 0;
+        }
+
+        strong {
+            color: var(--clr-primary-text);
         }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo-area">Sarathi<span>.</span></div>
-    <div class="doc-title">Privacy Policy</div>
-    <div class="update-date">Official Documentation • Updated April 2026</div>
-</header>
+    <nav class="navbar">
+        <div class="nav-title">
+            <h1>Privacy Policy</h1>
+            <p>Official Sarathi Documentation</p>
+        </div>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L4 5V11C4 16.19 7.41 21.05 12 22C16.59 21.05 20 16.19 20 11V5L12 2ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z" fill="#0ECB81"/>
+        </svg>
+    </nav>
 
-<div class="wrapper">
-    
-    <section>
-        <span class="section-tag">DATA ARCHITECTURE</span>
-        <h2><i class="fas fa-shield-halved"></i> Data Collection & Transparency</h2>
-        <p>Sarathi is designed with an <strong>Offline-First</strong> philosophy. Your business data stays where it belongs: on your device.</p>
-        
-        <div class="data-item">
-            <div>
-                <span class="data-label">Financial Ledger Content</span>
-                <span class="data-desc">Customer names, balances, and transaction history.</span>
-            </div>
-            <span class="badge badge-offline"><i class="fas fa-cloud-slash"></i> Offline Only</span>
+    <div class="container">
+        <div class="timestamp">Last Updated: April 2026</div>
+
+        <div class="section-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>Data Architecture</span>
+        </div>
+        <h2>Data Collection & Transparency</h2>
+        <div class="content">
+            Sarathi is designed with an Offline-First philosophy. Your business data stays where it belongs: on your device.
+
+            <ul>
+                <li><strong>Financial Ledger Content:</strong> Customer names, balances, and transaction history. (Stored locally; we have no access).</li>
+                <li><strong>Identity & License Data:</strong> Business Name, PAN Number, and License Expiry. (Used for license management and support).</li>
+                <li><strong>Security Identifiers:</strong> Unique Device ID for hardware license locking.</li>
+            </ul>
+            
+            <strong>Note on Personal/Sensitive Data:</strong> Some data we collect, such as PAN numbers and hardware-bound identifiers, is considered personal information. This is used strictly for authentication purposes.
         </div>
 
-        <div class="data-item">
-            <div>
-                <span class="data-label">Identity & License Data</span>
-                <span class="data-desc">Business Name, PAN Number, and License Expiry.</span>
+        <div class="callout-box">
+            <div class="callout-header">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 6c1.4 0 2.5 1.1 2.5 2.5S13.4 12 12 12s-2.5-1.1-2.5-2.5S10.6 7 12 7zm0 10c-2.1 0-4-1-5.2-2.6.1-1.7 3.5-2.7 5.2-2.7s5.1 1 5.2 2.7c-1.2 1.6-3.1 2.6-5.2 2.6z"/></svg>
+                Privacy Commitment
             </div>
-            <span class="badge badge-shared"><i class="fas fa-share-nodes"></i> Shared for License</span>
+            <p class="callout-text">
+                We do not have access to your individual financial records. Our administrative systems only see aggregate licensing metadata to verify activation status.
+            </p>
         </div>
 
-        <div class="data-item">
-            <div>
-                <span class="data-label">Security Identifiers</span>
-                <span class="data-desc">Unique Device ID for hardware license locking.</span>
-            </div>
-            <span class="badge badge-shared"><i class="fas fa-lock"></i> Shared for Security</span>
+        <div class="section-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            <span>Transmission & Sharing</span>
+        </div>
+        <h2>Security Protocols</h2>
+        <div class="content">
+            We do not sell, rent, or trade your data. We do not use third-party analytics or advertising services. 
+
+            <strong>Administrative API:</strong> The app communicates via encrypted TLS/SSL protocols to monitor license activation. We do not share your personal data with third parties except where required by law.
         </div>
 
-        <div class="data-item">
-            <div>
-                <span class="data-label">Diagnostic Logs</span>
-                <span class="data-desc">Technical crash reports to improve app stability.</span>
-            </div>
-            <span class="badge badge-system"><i class="fas fa-robot"></i> System Collected</span>
+        <div class="section-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>User Rights</span>
+        </div>
+        <h2>Your Control Over Data</h2>
+        <div class="content">
+            You have the right to:
+            <ul>
+                <li><strong>Access & Correction:</strong> Request a copy of your registration records.</li>
+                <li><strong>Deletion:</strong> Request the deletion of your account metadata from our licensing bot.</li>
+                <li><strong>Children’s Privacy:</strong> This app is not intended for children under 13. We do not knowingly collect data from children.</li>
+            </ul>
         </div>
 
-        <div class="callout">
-            <div class="callout-icon"><i class="fas fa-user-check"></i></div>
-            <div class="callout-content">
-                <h4>Privacy Commitment</h4>
-                <p>We do not have access to your individual financial records. Our administrative systems only see aggregate counts to verify license health.</p>
-            </div>
+        <div class="section-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+            <span>Objectives</span>
         </div>
-    </section>
+        <h2>Retention Policy</h2>
+        <div class="content">
+            We retain licensing metadata only for the duration of your active subscription. Once a license is canceled or expires, metadata is purged from our systems according to our maintenance schedule.
+        </div>
 
-    <section>
-        <span class="section-tag">TRANSMISSION</span>
-        <h2><i class="fas fa-network-wired"></i> Third-Party Sharing</h2>
-        <p>We do not sell, rent, or trade your data with advertisers. We utilize specific third-party infrastructure only for essential service operations:</p>
-        <p><strong>Telegram API:</strong> All license "Usage Pings" are transmitted via an encrypted administrative bot. This allows us to monitor license status and remaining days in real-time.</p>
-    </section>
+        <div class="section-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            <span>Contact</span>
+        </div>
+        <h2>Support & Inquiries</h2>
+        <div class="content">
+            <strong>Email:</strong> connectwithsarathi@gmail.com
+        </div>
 
-    <section>
-        <span class="section-tag">OBJECTIVES</span>
-        <h2><i class="fas fa-crosshairs"></i> Usage Purposes</h2>
-        <ul>
-            <li class="data-item"><span class="data-label">Licensing: Tracking your remaining days.</span></li>
-            <li class="data-item"><span class="data-label">Security: Preventing unauthorized multi-device license use.</span></li>
-            <li class="data-item"><span class="data-label">Support: Analyzing aggregate stats to optimize app performance.</span></li>
-        </ul>
-    </section>
-
-    <section>
-        <span class="section-tag">CONTACT</span>
-        <h2><i class="fas fa-envelope-open-text"></i> Support & Inquiries</h2>
-        <p>For questions regarding your data or to request the deletion of your registration records, please reach out to our team:</p>
-        <p style="font-weight: 700; color: var(--text-main); font-size: 16px;">
-            <i class="fas fa-at"></i> connectwithsarathi@gmail.com
-        </p>
-    </section>
-
-    <footer>
-        End of the document
-    </footer>
-
-</div>
+        <div class="footer">End of the Document</div>
+    </div>
 
 </body>
 </html>
